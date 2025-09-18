@@ -38,6 +38,18 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Skeleton loading colors */
+    --skeleton: 210 40% 92%;
+    --skeleton-shine: 0 0% 100%;
+    
+    /* Gradients for skeleton animation */
+    --gradient-skeleton: linear-gradient(
+      90deg,
+      hsl(var(--skeleton)) 0%,
+      hsl(var(--skeleton-shine) / 0.8) 50%,
+      hsl(var(--skeleton)) 100%
+    );
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -83,6 +95,11 @@ All colors MUST be HSL.
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
+    /* Skeleton loading colors - dark mode */
+    --skeleton: 217.2 32.6% 20%;
+    --skeleton-shine: 210 40% 95%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

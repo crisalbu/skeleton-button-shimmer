@@ -30,16 +30,67 @@ const buttonVariants = cva(
   },
 );
 
+const skeletonVariants = cva(
+  "relative overflow-hidden bg-skeleton animate-shimmer",
+  {
+    variants: {
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      size: "default",
+    },
+  }
+);
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  loading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, loading = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    
+    if (loading) {
+      return (
+        <div 
+          className={cn(
+            buttonVariants({ variant, size }),
+            "relative pointer-events-none"
+          )}
+        >
+          <div 
+            className={cn(
+              skeletonVariants({ size }),
+              "absolute inset-0 rounded-md"
+            )}
+            style={{
+              background: "linear-gradient(90deg, hsl(var(--skeleton)) 0%, hsl(var(--skeleton-shine) / 0.8) 50%, hsl(var(--skeleton)) 100%)",
+              backgroundSize: "200px 100%",
+              backgroundRepeat: "no-repeat"
+            }}
+          />
+          <span className="invisible">{children}</span>
+        </div>
+      );
+    }
+    
+    return (
+      <Comp 
+        className={cn(buttonVariants({ variant, size, className }))} 
+        ref={ref} 
+        {...props}
+      >
+        {children}
+      </Comp>
+    );
   },
 );
 Button.displayName = "Button";
