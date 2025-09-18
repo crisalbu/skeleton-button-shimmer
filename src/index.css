@@ -41,6 +41,7 @@ All colors MUST be HSL.
     /* Skeleton loading colors */
     --skeleton: 210 40% 92%;
     --skeleton-shine: 0 0% 100%;
+    --skeleton-foreground: 215.4 16.3% 46.9%;
     
     /* Gradients for skeleton animation */
     --gradient-skeleton: linear-gradient(
@@ -99,6 +100,7 @@ All colors MUST be HSL.
     /* Skeleton loading colors - dark mode */
     --skeleton: 217.2 32.6% 20%;
     --skeleton-shine: 210 40% 95%;
+    --skeleton-foreground: 215 20.2% 65.1%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

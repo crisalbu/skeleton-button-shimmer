@@ -77,7 +77,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               backgroundRepeat: "no-repeat"
             }}
           />
-          <span className="invisible">{children}</span>
+          <span className="relative z-10 text-skeleton-foreground/70">{children}</span>
         </div>
       );
     }
