@@ -63,13 +63,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <div 
           className={cn(
             buttonVariants({ variant, size }),
-            "relative pointer-events-none"
+            "relative pointer-events-none border-opacity-10"
           )}
         >
           <div 
             className={cn(
               skeletonVariants({ size }),
-              "absolute inset-0 rounded-md"
+              "absolute inset-0 rounded-[4px]"
             )}
             style={{
               background: "linear-gradient(90deg, hsl(var(--skeleton)) 0%, hsl(var(--skeleton-shine) / 0.8) 50%, hsl(var(--skeleton)) 100%)",
