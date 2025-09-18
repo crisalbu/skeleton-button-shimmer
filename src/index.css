@@ -17,23 +17,6 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Button design system colors */
-    --button-primary: 270 5% 19%;
-    --button-primary-foreground: 0 0% 100%;
-    --button-primary-border: 270 5% 19%;
-    
-    --button-secondary: 0 0% 0% / 0;
-    --button-secondary-foreground: 270 5% 19%;
-    --button-secondary-border: 210 7% 91%;
-    --button-secondary-hover: 240 10% 95%;
-    --button-secondary-border-hover: 210 8% 80%;
-    
-    --button-danger: 0 100% 57% / 0.1;
-    --button-danger-foreground: 0 100% 35%;
-    --button-danger-border: 0 100% 57% / 0.1;
-    --button-danger-hover: 0 100% 57% / 0.3;
-    --button-danger-border-hover: 0 100% 57% / 0.05%;
-
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
@@ -86,23 +69,6 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Button design system colors - dark mode */
-    --button-primary: 270 5% 85%;
-    --button-primary-foreground: 270 5% 19%;
-    --button-primary-border: 270 5% 85%;
-    
-    --button-secondary: 0 0% 100% / 0;
-    --button-secondary-foreground: 270 5% 85%;
-    --button-secondary-border: 217.2 32.6% 25%;
-    --button-secondary-hover: 217.2 32.6% 15%;
-    --button-secondary-border-hover: 217.2 32.6% 35%;
-    
-    --button-danger: 0 100% 57% / 0.15;
-    --button-danger-foreground: 0 100% 70%;
-    --button-danger-border: 0 100% 57% / 0.15;
-    --button-danger-hover: 0 100% 57% / 0.4;
-    --button-danger-border-hover: 0 100% 57% / 0.1;
-
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
