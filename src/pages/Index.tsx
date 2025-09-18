@@ -118,11 +118,19 @@ const Index = () => {
           {/* Always Loading Examples */}
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold">Always Loading Examples</h2>
-            <div className="flex items-center gap-4">
-              <Button loading={true}>Loading State</Button>
-              <Button variant="secondary" loading={true}>Processing</Button>
-              <Button variant="outline" loading={true}>Submitting</Button>
-              <Button variant="destructive" loading={true}>Deleting</Button>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button loading={true}>Save changes</Button>
+              <Button variant="secondary" loading={true}>Upload file</Button>
+              <Button variant="outline" loading={true}>Send message</Button>
+              <Button variant="destructive" loading={true}>Delete account</Button>
+              <Button size="sm" loading={true}>Processing payment</Button>
+              <Button size="lg" loading={true}>Generate report</Button>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 mt-4">
+              <Button loading={true}>Creating workspace</Button>
+              <Button variant="secondary" loading={true}>Syncing data</Button>
+              <Button variant="outline" loading={true}>Exporting files</Button>
+              <Button size="sm" variant="destructive" loading={true}>Remove user</Button>
             </div>
           </div>
 
