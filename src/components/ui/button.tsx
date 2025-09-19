@@ -5,22 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        default: "border border-[hsl(var(--btn-primary-border))] bg-[hsl(var(--btn-primary-bg))] text-[hsl(var(--btn-primary-text))] hover:opacity-90",
+        destructive: "border border-[hsl(var(--btn-danger-border)/0.1)] bg-[hsl(var(--btn-danger-bg)/0.1)] text-[hsl(var(--btn-danger-text))] hover:border-[hsl(var(--btn-danger-border)/0.05)] hover:bg-[hsl(var(--btn-danger-bg)/0.3)]",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        secondary: "border border-[hsl(var(--btn-secondary-border))] bg-transparent text-[hsl(var(--btn-secondary-text))] hover:border-[hsl(var(--btn-secondary-border-active))] hover:bg-[hsl(var(--btn-secondary-bg-active))]",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-8 min-w-16 px-4 py-1 gap-2 rounded",
+        sm: "h-7 min-w-14 px-3 py-1 gap-1.5 rounded text-xs",
+        lg: "h-9 min-w-20 px-6 py-1.5 gap-2.5 rounded text-base",
+        icon: "h-8 w-8 rounded",
       },
     },
     defaultVariants: {
@@ -35,10 +35,10 @@ const skeletonVariants = cva(
   {
     variants: {
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-8 min-w-16 px-4 py-1",
+        sm: "h-7 min-w-14 px-3 py-1",
+        lg: "h-9 min-w-20 px-6 py-1.5",
+        icon: "h-8 w-8",
       },
     },
     defaultVariants: {
@@ -63,13 +63,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <div 
           className={cn(
             buttonVariants({ variant, size }),
-            "relative pointer-events-none"
+            "relative pointer-events-none border-opacity-20"
           )}
         >
           <div 
             className={cn(
               skeletonVariants({ size }),
-              "absolute inset-0 rounded-md"
+              "absolute inset-0 rounded"
             )}
             style={{
               background: "linear-gradient(90deg, hsl(var(--skeleton)) 0%, hsl(var(--skeleton-shine) / 0.8) 50%, hsl(var(--skeleton)) 100%)",
