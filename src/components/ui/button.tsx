@@ -63,7 +63,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <div 
           className={cn(
             buttonVariants({ variant, size }),
-            "relative pointer-events-none border-opacity-20"
+            "relative pointer-events-none opacity-60"
           )}
         >
           <div 

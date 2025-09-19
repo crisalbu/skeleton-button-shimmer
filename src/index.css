@@ -39,8 +39,8 @@ All colors MUST be HSL.
     --radius: 0.25rem;
 
     /* Button design tokens */
-    --btn-primary-bg: 210 11% 19%;
-    --btn-primary-border: 210 11% 19%;
+    --btn-primary-bg: 220 9% 19%;
+    --btn-primary-border: 220 9% 19%;
     --btn-primary-text: 0 0% 100%;
     
     --btn-secondary-bg: 0 0% 0%;
@@ -49,10 +49,10 @@ All colors MUST be HSL.
     --btn-secondary-bg-active: 240 9% 94%;
     --btn-secondary-border-active: 220 13% 80%;
     
-    --btn-danger-bg: 0 100% 50%;
-    --btn-danger-border: 0 100% 50%;
+    --btn-danger-bg: 0 73% 54%;
+    --btn-danger-border: 0 73% 54%;
     --btn-danger-text: 0 0% 100%;
-    --btn-danger-bg-active: 0 100% 45%;
+    --btn-danger-bg-active: 0 73% 54%;
 
     /* Skeleton loading colors */
     --skeleton: 210 40% 92%;
@@ -124,10 +124,10 @@ All colors MUST be HSL.
     --btn-secondary-bg-active: 217.2 32.6% 20%;
     --btn-secondary-border-active: 217.2 32.6% 30%;
     
-    --btn-danger-bg: 0 84% 30%;
-    --btn-danger-border: 0 84% 30%;
+    --btn-danger-bg: 0 73% 35%;
+    --btn-danger-border: 0 73% 35%;
     --btn-danger-text: 210 40% 98%;
-    --btn-danger-bg-active: 0 84% 25%;
+    --btn-danger-bg-active: 0 73% 30%;
     
     /* Skeleton loading colors - dark mode */
     --skeleton: 217.2 32.6% 20%;
